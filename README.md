@@ -57,6 +57,8 @@ Binary `.obj` files are read byte-by-byte. The loader correctly handles **endian
 ### Reverse Assembly (Disassembler)
 `reverse_assemble()` decodes every instruction class in the LC4 ISA by masking and shifting the raw 16-bit opcode — covering arithmetic, logical, memory, branch, and subroutine instructions — and writes the corresponding assembly string back into each linked list node.
 
+![LC4 Disassembler Code](screenshots/lc4.png)
+
 ### Build System
 A hand-written `Makefile` compiles the project into three independently linked object files (`lc4_memory.o`, `lc4_loader.o`, `lc4_disassembler.o`) before linking into a final `lc4` executable using `clang -Wall -g`.
 
